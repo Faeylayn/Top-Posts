@@ -11,13 +11,12 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', ['jsonService', '$scope', function(jsonService, $scope) {
   jsonService.get().then(function(json) {
-    console.log(json);
     $scope.data = json.data;
     $scope.topPosts = [];
     $scope.otherPosts = [];
     $scope.summaryPosts = [];
     $scope.data.forEach(function(post) {
-      if (parseInt(post.comments) > 9 && parseInt(post.views) > 9000 && 
+      if (parseInt(post.comments) > 9 && parseInt(post.views) > 9000 &&
         post.title.length < 40 && post.privacy == "public") {
         $scope.topPosts.push(post);
       } else {
@@ -25,6 +24,7 @@ angular.module('myApp.view1', ['ngRoute'])
       }
     })
   })
+
 
 
 

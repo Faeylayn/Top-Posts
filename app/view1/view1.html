@@ -1,1 +1,9 @@
-<p>This is the partial for view 1.</p>
+<input type="radio" name="posts" value="top" ng-model="postDisplay">
+<input type="radio" name="posts" value="other" ng-model="postDisplay">
+<input type="radio" name="posts" value="summary" ng-model="postDisplay">
+
+{{postDisplay}}
+
+<ul>
+  <li ng-repeat='post in topPosts' ng-hide="postDisplay != 'top'">{{post.title}}</li>
+</ul>
