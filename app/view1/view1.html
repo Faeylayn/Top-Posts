@@ -1,4 +1,5 @@
 <input type="radio" name="posts" value="top" ng-model="postDisplay">
+<input type="radio" name="posts" value="daily" ng-model="postDisplay">
 <input type="radio" name="posts" value="other" ng-model="postDisplay">
 <input type="radio" name="posts" value="summary" ng-model="postDisplay">
 
@@ -6,4 +7,7 @@
 
 <ul>
   <li ng-repeat='post in topPosts' ng-hide="postDisplay != 'top'">{{post.title}}</li>
+  <li ng-repeat='post in otherPosts' ng-hide="postDisplay != 'other'">{{post.title}}</li>
+  <li ng-repeat='post in summaryPosts' ng-hide="postDisplay != 'summary'">{{post.title}}</li>
+
 </ul>
