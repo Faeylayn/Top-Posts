@@ -7,7 +7,8 @@
 
 <ul>
   <li ng-repeat='post in topPosts' ng-hide="postDisplay != 'top'">{{post.title}}</li>
+  <li ng-hide="postDisplay != 'daily'">{{dailyPost.title}}</li>
   <li ng-repeat='post in otherPosts' ng-hide="postDisplay != 'other'">{{post.title}}</li>
-  <li ng-repeat='post in summaryPosts' ng-hide="postDisplay != 'summary'">{{post.title}}</li>
+  <li ng-repeat='post in summaryPosts' ng-hide="postDisplay != 'summary'">{{post}}</li>
 
 </ul>

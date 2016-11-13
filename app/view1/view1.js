@@ -15,6 +15,7 @@ angular.module('myApp.view1', ['ngRoute'])
     $scope.topPosts = [];
     $scope.otherPosts = [];
     $scope.summaryPosts = [];
+    $scope.dailyPost = {};
     $scope.data.forEach(function(post) {
       if (parseInt(post.comments) > 9 && parseInt(post.views) > 9000 &&
         post.title.length < 40 && post.privacy == "public") {
@@ -22,6 +23,8 @@ angular.module('myApp.view1', ['ngRoute'])
       } else {
         $scope.otherPosts.push(post);
       }
+
+      $scope.summaryPosts.push(post.id)
     })
   })
 
