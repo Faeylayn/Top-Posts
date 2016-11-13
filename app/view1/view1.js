@@ -19,6 +19,7 @@ angular.module('myApp.view1', ['ngRoute'])
     $scope.data.forEach(function(post) {
       if (parseInt(post.comments) > 9 && parseInt(post.views) > 9000 &&
         post.title.length < 40 && post.privacy == "public") {
+          console.log(post);
         $scope.topPosts.push(post);
       } else {
         $scope.otherPosts.push(post);
