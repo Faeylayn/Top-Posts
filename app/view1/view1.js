@@ -10,6 +10,10 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['jsonService', '$scope', function(jsonService, $scope) {
+
+  //this can be refactored into a service
+  // $scope.posts = postService.separatePosts(json.data); should return an object with the 4 attrs
+
   $scope.topPosts = [];
   $scope.otherPosts = [];
   $scope.summaryPosts = [];
