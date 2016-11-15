@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.version',
-  'myApp.jsonService'
+  'myApp.jsonService',
+  'myApp.parseService'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 

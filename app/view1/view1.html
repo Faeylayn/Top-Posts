@@ -6,7 +6,7 @@
 {{postDisplay}}
 
 <ul>
-  <li ng-repeat='post in topPosts' ng-hide="postDisplay != 'top'">
+  <li ng-repeat='post in posts.topPosts' ng-hide="postDisplay != 'top'">
     <div class="post-title">
       Post # - {{post.id}} | {{post.title}}
     </div>
@@ -14,8 +14,7 @@
       Views - {{post.views}} | Comments - {{post.comments}} | Likes - {{post.likes}}
     </div>
   </li>
-  <li ng-hide="postDisplay != 'daily'">{{dailyPost.title}}</li>
-  <li ng-repeat='post in otherPosts' ng-hide="postDisplay != 'other'">
+  <li ng-repeat='post in posts.dailyPosts' ng-hide="postDisplay != 'daily'">
     <div class="post-title">
       Post # - {{post.id}} | {{post.title}}
     </div>
@@ -23,6 +22,14 @@
       Views - {{post.views}} | Comments - {{post.comments}} | Likes - {{post.likes}}
     </div>
   </li>
-  <li ng-repeat='post in summaryPosts' ng-hide="postDisplay != 'summary'">{{post}}</li>
+  <li ng-repeat='post in posts.otherPosts' ng-hide="postDisplay != 'other'">
+    <div class="post-title">
+      Post # - {{post.id}} | {{post.title}}
+    </div>
+    <div class="post-body">
+      Views - {{post.views}} | Comments - {{post.comments}} | Likes - {{post.likes}}
+    </div>
+  </li>
+  <li ng-repeat='post in posts.summaryPosts' ng-hide="postDisplay != 'summary'">{{post}}</li>
 
 </ul>
