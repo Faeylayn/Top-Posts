@@ -1,9 +1,10 @@
+<h1>Post Parser</h1>
+
 <input type="radio" name="posts" value="top" ng-model="postDisplay">
 <input type="radio" name="posts" value="daily" ng-model="postDisplay">
 <input type="radio" name="posts" value="other" ng-model="postDisplay">
 <input type="radio" name="posts" value="summary" ng-model="postDisplay">
 
-{{postDisplay}}
 
 <ul>
   <li ng-repeat='post in posts.topPosts' ng-hide="postDisplay != 'top'">
